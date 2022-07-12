@@ -23,6 +23,20 @@ body{
 }
 
     /* reset styles */
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    p {
+        margin: 0;
+    }
+
+    img {
+    display: block;
+    }
+
 .link {
     text-decoration: none;
     color: currentColor;
@@ -30,16 +44,63 @@ body{
 
 .list {
     list-style: none; 
+    padding: 0;
+    margin: 0;
 }
 
-    
+
+/* base styles */
+.container {
+    width: 1200px;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+
+    /* outline: 2px solid red;
+    outline-offset: -2px; */
+}    
+
+.section {
+    padding-top: 94px;
+    padding-bottom: 94px;
+    /* margin: 0; */
+    /* box-sizing: border-box; */
+    /* outline: 8px solid rgb(71, 77, 255); */
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
  /* 
 ==================
      Header
 =================
 */ 
 
+.header-container {
+    display: flex;
+    align-items: center;
+
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+    border-bottom-color: #ECECEC;
+}
+
 .logo {
+    margin-right: 90px;
+    /* margin-left: 200px; */
     font-family: var(--secondary-font);
     font-weight: 700;
     font-size: 26px;
@@ -52,8 +113,33 @@ body{
     color: #000000;
 } 
 
+.header-nav{
+    /* margin-right: 330px; */
+    margin-right: auto;     
+}
+
+.header-list {
+    display: flex;
+    gap: 50px;
+}
+
+/* заменим на gap  в header-list */
+/* .header-item {
+    margin-right: 50px;
+}
+
+.header-item:last-child {
+    margin-right: 0;
+} */
+
+.header-cnt {
+    display: flex;
+}
+
 .header-link,
 .header-mail {
+    padding-top: 32px;
+    padding-bottom: 32px;
     font-weight: 500;
     font-size: 14px;
     line-height: calc(16 / 14);
@@ -73,11 +159,17 @@ body{
 }
 
 .header-phone {
+    padding-top: 32px;
+    padding-bottom: 32px;
     font-weight: 500;
     font-size: 14px;
     line-height: calc(16 / 14);
     letter-spacing: 0.02em; 
     color: var(--secondary-cl);
+}
+
+.header-mail {
+    margin-right: 50px;
 }
 
 /* 
@@ -86,15 +178,33 @@ body{
 Hero section
 =================
 */ 
+
 .hero {
-    background-color: var(--dark-bg-cl);
+    /* height: 600px; */
+    /* text-align: center; */
+    /* padding: 200px 200px; */
+    /* height: 600px; */
+    /* margin-bottom: 97px; */
+    width: 1200px;
+    margin-right: auto;
+    margin-left: auto;
+
+    background-color: var(--dark-bg-cl);         
+}
+
+.ctn {
+    height: 600px;
+    text-align: center;
+    /* outline: 2px solid teal; */    
 }
 
 .main-title {
+    padding-top: 200px;
+    /* padding-bottom: 280px; */
+    margin-bottom: 30px;
     font-weight: 900;
     font-size: 44px;
-    line-height: calc(60 / 44);
-    text-align: center;
+    line-height: calc(60 / 44);     
     letter-spacing: 0.06em;
     text-transform: uppercase; 
     color: #FFFFFF;
@@ -106,25 +216,59 @@ Hero section
 }
 /* кнопка не наследует шрифты */
 .hero-btn {
+    max-width: 250px;
+    min-width: 200px;
+    min-height: 50px;
+    padding: 9px 31px; 
+    /* margin-top: 30px; */
     font-family: inherit;
     font-weight: 700;
     font-size: 16px;
     line-height: calc(30 / 16);    
+    /* text-align: center; */
     letter-spacing: 0.06em;
     color: var(--btn-txt-cl);
     background-color: var(--accent-cl);
-    cursor: pointer;
+    cursor: pointer;  
+
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);    
+    border-radius: 4px; 
 }
 
-/* 
-==================
+
+ 
+ /* ============
  Features section
 =================
-*/ 
-.features,
-.affairs {
-    background-color: var(--light-bg-cl);
+*/  
+
+.features {
+    width: 1200px;
+    margin-right: auto;
+    margin-left: auto;
 }
+
+.features-list {
+    display: flex;
+    /* justify-content: space-between;  */
+    gap: 30px;
+    background-color: var(--light-bg-cl);
+
+    /* padding-top: 97px;
+    padding-bottom: 94px; 
+    width: 1200px;
+    Width: 1170px;
+    margin-right: auto;
+    margin-left: auto;  */
+}
+
+
+.ftr-items {
+    text-align: justify;  
+    padding: 0;
+    /* justify-content: space-between; */
+    align-items: center;
+} 
 
 .features-subtitle {
     font-weight: 700;
@@ -135,7 +279,8 @@ Hero section
     color: var(--main-txt-cl);
 }
  
-.features-descript {
+.features-descript { 
+    padding-bottom: 94px;
     /* font-weight: 400; */
     font-size: 14px;
     line-height: calc(24 / 14);
@@ -148,7 +293,24 @@ Hero section
  Affairs section
 =================
 */ 
+
+.affair {
+    width: 1200px;
+
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.affairs-list {
+    display: flex;
+    gap: 30px;
+    /* padding-top: 94px;
+    padding-bottom: 94px; */
+    background-color: var(--light-bg-cl);
+}
+
 .affairs-title {
+margin-bottom: 50px;
 font-weight: 700;
 font-size: 36px;
 line-height: calc(42 / 36);
@@ -156,18 +318,32 @@ text-align: center;
 letter-spacing: 0.03em;
 color: var(--main-txt-cl);
 }
-   
+/*   
+.affairs-img {
+    margin-bottom: 94px;
+} */
 
 /* 
 ==================
  team section
 =================
-*/ 
+*/
+
 .team {
+    width: 1200px;
+    margin-right: auto;
+    margin-left: auto;
     background-color: var(--blond-bg-cl);
 }
 
+.team-list {
+    display: flex;
+    gap: 30px;
+}
+
 .team-title {
+    margin-top: 94px;
+    margin-bottom: 50px; 
     font-weight: 700;
     font-size: 36px;
     line-height: calc(42 / 36);
@@ -176,7 +352,30 @@ color: var(--main-txt-cl);
     color: var(--main-txt-cl);
 }
 
+/* .tl-item {
+    width: 270px;
+    height: 370px;
+    text-align: center;      
+} */
+
+/* .team-img {
+    margin-bottom: 0;
+}  */
+
+.team-wrapper{
+    padding-top: 30px;
+    padding-right: 5px;
+    padding-bottom: 30px;
+    padding-left: 5px; 
+
+    text-align: center;  
+    /* outline: 2px solid green; */
+} 
+
+
+
 .team-list-subtitle {
+    margin-bottom: 10px;
     font-weight: 500;
     font-size: 16px;
     line-height: calc(19 / 16);
@@ -200,6 +399,9 @@ color: var(--main-txt-cl);
 =================
 */ 
 .footer {
+    width: 1200px;
+    margin-right: auto;
+    margin-left: auto;
     background-color: var(--dark-bg-cl);
 }
 
@@ -259,6 +461,27 @@ color: var(--main-txt-cl);
 ==================   
 */
 
+.portfolio {
+    width: 1200px;
+    margin-right: auto;
+    margin-left: auto;
+    background-color: var(--blond-bg-cl);
+}
+
+.filters-list {
+    display: flex;
+    gap: 8px;
+    /* width: 611px; */
+    height: 54px;
+    justify-content: center;
+    /* width: 610px;
+    height: 55px; */
+    /* justify-content: space-between; */
+    /* align-items: flex-start;  */
+    margin-top: 0;
+    margin-bottom: 0;
+    }
+
 .fl-btn {
     font-family: inherit;
     font-weight: 500;
@@ -269,7 +492,15 @@ color: var(--main-txt-cl);
     color: var(--main-txt-cl);
     background: var(--blond-bg-cl);
     cursor: pointer;
-}
+    display: inline-block;
+    /* max-width: 100px;
+    min-width: 70px;
+    min-height: 40px;      */
+    box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
+    padding: 5px 21px;
+    border-radius: 4px;    
+    /* margin-right: 0px; */
+} 
 
 .fl-btn:hover,
 .fl-btn:focus {
@@ -278,11 +509,50 @@ color: var(--main-txt-cl);
 }
 
 
+
 /* 
 ==================
     projects part
 =================
 */ 
+
+.pf-lists {
+  display: flex;
+  /* Make a flex container multiline */
+  flex-wrap: wrap;
+  /* Set gap between rows and columns */
+  gap: 30px;
+  padding: 0;
+  list-style: none;
+}
+
+.wrapper{
+    padding-top: 30px;
+    padding-right: 5px;
+    padding-bottom: 30px;
+    padding-left: 5px;
+
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+    border-bottom-color: #EEEEEE;
+    
+    /* outline: 2px solid green; */
+}
+
+.item {
+  /*  Set the width of the elements  */
+  flex-basis: calc((100% - 60px) / 3);
+  
+  /* padding: 10px;
+  background-color: #fff;
+  border-radius: 4px;
+  box-shadow: 0px 2px 1px -1px rgba(0, 0, 0, 0.2),
+    0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12); */
+}
+
+
+
+
 .pf-list-subtitle {
     font-weight: 700;
     font-size: 18px;
