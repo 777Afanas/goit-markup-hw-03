@@ -89,8 +89,8 @@ body{
 */ 
 
 .header {
-    padding-top: 15px;
-    padding-bottom: 45px;
+    padding-top: 24px;
+    padding-bottom: 24px;
     border-bottom-width: 1px;
     border-bottom-style: solid;
     border-bottom-color: #ECECEC;
@@ -241,6 +241,7 @@ Hero section
 }
 
 .features-subtitle {
+    margin-bottom: 10px;
     font-weight: 700;
     font-size: 14px;
     line-height: calc (16 \ 14);
@@ -261,6 +262,10 @@ Hero section
  Affairs section
 =================
 */ 
+
+.affair {
+    padding-top: 0;
+}
 
 .affairs-list {
     display: flex;
@@ -351,13 +356,26 @@ color: var(--main-txt-cl);
     color: #2196F3;
 } */
 
+.ftr{
+    margin-bottom: 20px;
+}
+
 .f-lg {
     color: #FFFFFF;
 }
 
+/* .ftr{
+    margin-bottom: 20px;
+} */
+
 .address{
+    margin-top: 20px;
     font-style: normal;
     /* visibility: hidden; */
+}
+
+.address-item {
+    margin-bottom: 9px;
 }
 
 .address-add {
@@ -403,7 +421,7 @@ color: var(--main-txt-cl);
     display: flex;
     gap: 8px;
     /* width: 611px; */
-    height: 54px;
+    /* height: 54px; */
     justify-content: center;
     margin-top: 0;
     margin-bottom: 50px;
@@ -481,6 +499,7 @@ color: var(--main-txt-cl);
 }
  
 .pf-list-subtitle {
+    margin-bottom: 4px;
     font-weight: 700;
     font-size: 18px;
     line-height: calc(36 /18);
