@@ -44,6 +44,10 @@ button {
   margin: 0 auto; 
 }
 
+.section {
+  padding: 120px 0;
+}
+
 .section-subtitle {
   font-weight: 500;
   font-size: 20px;
@@ -147,19 +151,29 @@ button {
 
 /* ======== HERO SECTION ======== */
 .hero {
+  padding: 188px 0;
   background-color: var(--secondary-black-color);
 }
 
 .main-title {
+  max-width: 496px;
+  margin: 0 auto 48px auto;  
+  text-align: center;
   font-weight: 700;
   font-size: 56px;
-  line-height: 1.07;
-  text-align: center;
+  line-height: 1.07;   
   letter-spacing: 0.02em;
   color: var(--primary-white-color);
 }
 
 .hero-btn {
+  display: block;
+  min-width: 169px;   
+  padding: 16px 32px;
+  border: none;
+  border-radius: 4px;   
+  margin: 0 auto; 
+  cursor: pointer;  
   font-weight: 500;
   font-size: 16px;
   line-height: 1.5;
@@ -171,6 +185,7 @@ button {
 .hero-btn:hover,
 .hero-btn:focus {
   background-color: var(--primary-accent-color);
+box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
 }
 
 /* ======== /HERO SECTION ======== */
